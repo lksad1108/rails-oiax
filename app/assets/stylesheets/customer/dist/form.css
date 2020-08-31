@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/* グレー系 */
+/* 黄色系 */
+/*　赤系  */
+/*   緑系  */
+/* マージン、パディング */
+/* フォントサイズ */
+/* 行の高さ */
+div#wrapper div#container div#generic-form {
+  width: 480px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  border: solid 4px #888844;
+  background-color: #fafafa;
+}
+div#wrapper div#container div#generic-form form div {
+  padding: 10px;
+}
+div#wrapper div#container div#generic-form form div label {
+  display: block;
+  padding: 6px 0;
+}
+div#wrapper div#container div#generic-form form div label.required:after {
+  content: "*";
+  padding-left: 2px;
+  color: #cc0000;
+}
+div#wrapper div#container div#generic-form form div span.instruction {
+  font-size: 10px;
+  color: #666666;
+}
+div#wrapper div#container div#generic-form form div div.fielfd-value {
+  margin-left: 10px;
+  font-weight: bold;
+}
+div#wrapper div#container div#generic-form form div div.readonly {
+  color: #666666;
+}
+div#wrapper div#container div#generic-form form div span.fileld-value {
+  font-weight: bold;
+}
+div#wrapper div#container div#generic-form form div.input-block input {
+  margin-right: 4px;
+}
+div#wrapper div#container div#generic-form form div.notes {
+  text-align: right;
+  font-size: 10px;
+}
+div#wrapper div#container div#generic-form form div.notes span.mark {
+  color: #cc0000;
+}
+div#wrapper div#container div#generic-form form div.check-boxes label,
+div#wrapper div#container div#generic-form form div.radio-buttons label {
+  display: inline-block;
+}
+div#wrapper div#container div#generic-form form input[type=checkbox] + label {
+  display: inline-block;
+}
+div#wrapper div#container div#generic-form form div.buttons {
+  text-align: center;
+}
+div#wrapper div#container div#generic-form form div.buttons input[type=submit] {
+  padding: 10px 20px;
+}
+div#wrapper div#container div#generic-form form div.field_with_errors {
+  display: inline;
+  padding: 0;
+}
+div#wrapper div#container div#generic-form form div.field_with_errors label {
+  color: #cc0000;
+}
+div#wrapper div#container div#generic-form form div.field_with_errors input {
+  background: #ffcccc;
+}
+div#wrapper div#container div#generic-form form div.with-errors label {
+  color: #cc0000;
+}
+div#wrapper div#container div#generic-form form div.with-errors input {
+  background-color: #ffcccc;
+}
+div#wrapper div#container div#generic-form form div.error-message {
+  color: #cc0000;
+  font-size: 10px;
+  padding: 0 20px;
+}

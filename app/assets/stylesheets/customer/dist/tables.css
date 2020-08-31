@@ -1,0 +1,62 @@
+@charset "UTF-8";
+/* グレー系 */
+/* 黄色系 */
+/*　赤系  */
+/*   緑系  */
+/* マージン、パディング */
+/* フォントサイズ */
+/* 行の高さ */
+div.table-wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+div.table-wrapper div.links {
+  text-align: right;
+  padding: 6px;
+}
+div.table-wrapper table {
+  margin: 6px auto 0;
+  border: solid 6px #33331a;
+}
+div.table-wrapper table tr th {
+  background-color: #666666;
+  color: #fafafa;
+}
+div.table-wrapper table tr th,
+div.table-wrapper table tr td {
+  padding: 2px;
+}
+div.table-wrapper table tr td.email,
+div.table-wrapper table tr td.date,
+div.table-wrapper table tr td.password {
+  font-family: monospace;
+}
+div.table-wrapper table tr td.boolean {
+  text-align: center;
+}
+div.table-wrapper table tr td.numeric {
+  text-align: right;
+}
+div.table-wrapper table tr td.actions {
+  text-align: center;
+  color: #666666;
+}
+div.table-wrapper table.listing {
+  width: 100%;
+}
+div.table-wrapper table.listing tr:nth-child(even) {
+  background-color: #fafafa;
+}
+div.table-wrapper table.listing tr:nth-child(odd) {
+  background-color: #eeeeee;
+}
+div.table-wrapper table.attributes {
+  width: 100%;
+}
+div.table-wrapper table.attributes th {
+  padding-right: 6px;
+  width: 200px;
+}
+div.table-wrapper table.attributes td {
+  background-color: #fafafa;
+}

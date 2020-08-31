@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/* グレー系 */
+/* シアン系 */
+/* 赤系 */
+/* 緑系 */
+/* マージン、パディング */
+/* フォントサイズ */
+/* 行の高さ */
+div.description,
+div.body {
+  margin: 10px;
+  padding: 10px;
+  background-color: #fafafa;
+}
+
+div.tags {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #fafafa;
+}
+div.tags span.current_tag {
+  fonr-weight: bold;
+}

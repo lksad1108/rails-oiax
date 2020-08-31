@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/* グレー系 */
+/* シアン系 */
+/* 赤系 */
+/* 緑系 */
+/* マージン、パディング */
+/* フォントサイズ */
+/* 行の高さ */
+div.table-wrapper table.entries tr:nth-child(1) th {
+  text-align: center;
+}
+div.table-wrapper table.entries tr th:nth-child(4n+1) {
+  padding: 6px;
+  width: 30px;
+  text-align: right;
+}
+div.table-wrapper table.entries tr td {
+  background-color: #fafafa;
+}
+div.table-wrapper div.button-wrapper {
+  margin: 10px;
+  text-align: center;
+}
+div.table-wrapper div.button-wrapper button {
+  padding: 6px;
+}
