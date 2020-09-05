@@ -1,13 +1,9 @@
 class Staff::ProgramsController < Staff::Base
   def index
-    # @programs = Program.order(application_start_time: :desc)
-    #   .page(parms[:page])
-    #   .includes(:registrant).page(params[:page])
-    @programs = Program.listing.page(parmams[:page])
+    @programs = Program.listing.page(params[:page])
   end
 
   def show
-    # @program = Program.find(params[:id])
     @program = Program.listing.find(params[:id])
   end
 
@@ -22,13 +18,13 @@ class Staff::ProgramsController < Staff::Base
 
   def create
     @program = Program.new
-    program.assign_attributes(program_params)
+    @program.assign_attributes(program_params)
     @program.registrant = current_staff_member
     if @program.save
       flash.notice = "プログラムを登録しました。"
       redirect_to action: "index"
     else
-      flash.now.alert = "入力に誤りがあります。"
+      flash.now.alert = "⼊⼒に誤りがあります。"
       render action: "new"
     end
   end
@@ -40,8 +36,8 @@ class Staff::ProgramsController < Staff::Base
       flash.notice = "プログラムを更新しました。"
       redirect_to action: "index"
     else
-      flash.now.alert = "入力に誤りがあります。"
-      render action: "new"
+      flash.now.alert = "⼊⼒に誤りがあります。"
+      render action: "edit"
     end
   end
 
@@ -61,9 +57,13 @@ class Staff::ProgramsController < Staff::Base
   end
 
   def destroy
-    program = Program.find(parms[:id])
-    program.destroy!
-    flash.notice = "プログラムを削除しました。"
+    program = Program.find(params[:id])
+    if program.deletable?
+      program.destroy!
+      flash.notice = "プログラムを削除しました。"
+    else
+      flash.alert = "このプログラムは削除できません。"
+    end
     redirect_to :staff_programs
   end
 end

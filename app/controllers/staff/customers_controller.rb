@@ -7,15 +7,13 @@ class Staff::CustomersController < Staff::Base
   end
 
   private def search_params
-    params[:search]&.permit([
+    params[:search].try(:permit, [
       :family_name_kana, :given_name_kana,
       :birth_year, :birth_month, :birth_mday,
       :address_type, :prefecture, :city, :phone_number
     ])
   end
-
-  end
-
+  
   def show
     @customer = Customer.find(params[:id])
   end

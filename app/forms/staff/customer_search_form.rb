@@ -7,6 +7,8 @@ class Staff::CustomerSearchForm
                 :address_type, :prefecture, :city, :phone_number
 
   def search
+    normalize_values
+
     rel = Customer
 
     if family_name_kana.present?
@@ -49,7 +51,7 @@ class Staff::CustomerSearchForm
   end
 
   private def normalize_values
-    self.family_name_kana = normalize_as_furingana(family_name_kana)
+    self.family_name_kana = normalize_as_furigana(family_name_kana)
     self.given_name_kana = normalize_as_furigana(given_name_kana)
     self.city = normalize_as_name(city)
     self.phone_number = normalize_as_phone_number(phone_number)
